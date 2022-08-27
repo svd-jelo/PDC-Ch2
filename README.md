@@ -21,18 +21,12 @@ The goal is to model the stirred-tank blending process.
 - Constant density during mixing
 - No reactions occur
 ### Conservation Equations
-Why is this not working?
-
-$x = 1.0 + y$
-
 The only necessary conservation equation to be set up is the solute balance.
-$$
-\begin{align*}
-    \frac{d\left(xw\right)}{dt} &= \left(x_1w_1 + x_2w_2\right)-xw\\
-    \frac{d\left(x\cdot\rho V\right)}{dt} &= \left(x_1w_1 + x_2w_2 \right) - x\cdot\rho V\\
+$$\begin{align*}
+    \frac{d\left(xw\right)}{dt} &= \left(x_1w_1 + x_2w_2\right) - xw\\
+    \frac{d\left(x\cdot\rho V\right)}{dt} &= \left(x_1w_1 + x_2w_2\right) - x\cdot\rho V\\
     \frac{dx}{dt} &= \frac{x_1w_1 + x_2w_2}{\rho V} - x
-\end{align*}
-$$
+\end{align*}$$
 This is the general model; all variables are time-dependent. Special cases of the model will be used for parts 2 through 4. For instance, in part 2 all but $x$ and $w_1$ are constant, and $w_1$ is equivalent to a function involving the Heaviside function $u(t-a)$,
 
 $$\begin{equation*}
