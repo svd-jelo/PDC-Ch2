@@ -55,6 +55,5 @@ $$\begin{align*}
     \frac{dx(t)}{dt} &= \frac{x_1w_1}{\rho V} + \frac{100x_2}{\rho V}\left[2-u(t-15)\right] - x(t)\\
     \frac{dx(t)}{dt} &= \frac{0.2w_1}{\rho V}\left[0.2 + u(t-15)\right] + \frac{100x_2}{\rho V}\left[2-u(t-15)\right] - x(t)
 \end{align*}$$
-These equations are easily solved using the Laplace transform method.
-
+These equations are easily solved using the Laplace transform method.<br/>
 Math inline equation: $x_1, w_1, w_2$
