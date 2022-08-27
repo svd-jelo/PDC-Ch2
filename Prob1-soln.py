@@ -51,10 +51,14 @@ X1 = (tau*x01 + R1)*Q
 X2 = (tau*x02 + R2)*Q
 X3 = (tau*x03 + R3)*Q
 
-#Solution
+#Solutions
 x1_ = invL(X1)
 x2_ = invL(X2)
 x3_ = invL(X3)
+
+print(x1_)
+print(x2_)
+print(x3_)
 
 #Time interval
 a = np.linspace(0,25,250)
