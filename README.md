@@ -21,7 +21,7 @@ The goal is to model the stirred-tank blending process.
 - Constant density during mixing
 - No reactions occur
 ### Conservation Equations
-The only necessary conservation equation to be set up is the solute balance.
+The only necessary conservation equation to be set up is the solute balance.<br/>
 $$\begin{align*}
     \frac{d\left(xw\right)}{dt} &= \left(x_1w_1 + x_2w_2\right) - xw\\
     \frac{d\left(x\cdot\rho V\right)}{dt} &= \left(x_1w_1 + x_2w_2\right) - x\cdot\rho V\\
