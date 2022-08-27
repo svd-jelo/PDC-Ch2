@@ -29,7 +29,7 @@ $$\begin{align*}
     \frac{dx}{dt} &= \frac{x_1w_1 + x_2w_2}{\rho V} - x
 \end{align*}$$
 
-This is the general model; all variables are time-dependent. Special cases of the model will be used for parts 2 through 4. For instance, in part 2 all but $x$
+<br/> This is the general model; all variables are time-dependent. Special cases of the model will be used for parts 2 through 4. For instance, in part 2 all but $x$
 
 $$\begin{equation*}
     u(t-a)=
