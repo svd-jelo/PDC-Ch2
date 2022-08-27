@@ -21,7 +21,8 @@ The goal is to model the stirred-tank blending process.
 - Constant density during mixing
 - No reactions occur
 ### Conservation Equations
-The only necessary conservation equation to be set up is the solute balance.<br/>
+The only necessary conservation equation to be set up is the solute balance.
+
 $$
 \begin{align*}
     \frac{d\left(xw\right)}{dt} &= \left(x_1w_1 + x_2w_2\right)-xw\\
@@ -29,7 +30,9 @@ $$
     \frac{dx}{dt} &= \frac{x_1w_1 + x_2w_2}{\rho V} - x
 \end{align*}
 $$
+
 This is the general model; all variables are time-dependent. Special cases of the model will be used for parts 2 through 4. For instance, in part 2 all but $x$ and $w_1$ are constant, and $w_1$ is equivalent to a function involving the Heaviside function $u(t-a)$,
+
 $$\begin{equation*}
     u(t-a)=
     \begin{cases}
@@ -37,6 +40,7 @@ $$\begin{equation*}
         1, & \text{if } t > a
     \end{cases}
 \end{equation*}$$
+
 ### Steady state value of x
 $$\begin{align*}
 x
@@ -52,3 +56,5 @@ $$\begin{align*}
     \frac{dx(t)}{dt} &= \frac{0.2w_1}{\rho V}\left[0.2 + u(t-15)\right] + \frac{100x_2}{\rho V}\left[2-u(t-15)\right] - x(t)
 \end{align*}$$
 These equations are easily solved using the Laplace transform method.
+
+Math inline equation: $x_1, w_1, w_2$
