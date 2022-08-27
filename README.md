@@ -44,19 +44,21 @@ The only necessary conservation equation to be set up is the solute balance. The
 ```katex
 \begin{align*}
     \frac{d\left(xw\right)}{dt} &= \left(x_1w_1 + x_2w_2\right) - xw\\
-    \frac{d\left(x\cdot\rho V\right)}{dt} &= \left(x_1w_1 + x_2w_2\right) - x\cdot\rho V\\
-    \frac{dx}{dt} &= \frac{x_1w_1 + x_2w_2}{\rho V} - x
+    \frac{d\left(x\cdot\rho V\right)}{dt} &= \left(x_1w_1 + x_2w_2\right) - xw\\
+    \tau\frac{dx}{dt} + x &= \frac{x_1w_1 + x_2w_2}{w}
 \end{align*}
 ```
+
+Where we have denoted the quantity $`\rho V/w`$ by $`\tau`$.
 
 ### Steady state value of x
 
 ```katex
 \begin{align*}
 x
-&= \frac{x_1w_1 + x_2w_2}{\rho V}\\
-&= \frac{0.4(500) + 0.75(200)}{900(2)}\\
-&= 0.1944
+&= \frac{x_1w_1 + x_2w_2}{w}\\
+&= \frac{0.4(500) + 0.75(200)}{700}\\
+&= 0.5
 \end{align*}
 ```
 
@@ -66,9 +68,9 @@ The following are the respective special cases of the general model correspondin
 
 ```katex
 \begin{align*}
-    \frac{dx(t)}{dt} &= \frac{x_2w_2}{\rho V} + \frac{100x_1}{\rho V}\left[5-u(t-15)\right] - x(t)\\
-    \frac{dx(t)}{dt} &= \frac{x_1w_1}{\rho V} + \frac{100x_2}{\rho V}\left[2-u(t-15)\right] - x(t)\\
-    \frac{dx(t)}{dt} &= \frac{0.2w_1}{\rho V}\left[0.2 + u(t-15)\right] + \frac{100x_2}{\rho V}\left[2-u(t-15)\right] - x(t)
+    \tau\frac{dx(t)}{dt} + x(t) &= \frac{x_2w_2}{w} + \frac{100x_1}{w}\left[5-u(t-15)\right] \\
+    \tau\frac{dx(t)}{dt} + x(t) &= \frac{x_1w_1}{w} + \frac{100x_2}{w}\left[2-u(t-15)\right] \\
+    \tau\frac{dx(t)}{dt} + x(t) &= \frac{0.2w_1}{w}\left[0.2 + u(t-15)\right] + \frac{100x_2}{w}\left[2-u(t-15)\right]
 \end{align*}
 ```
 
