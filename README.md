@@ -22,13 +22,11 @@ The goal is to model the stirred-tank blending process.
 - No reactions occur
 ### Conservation Equations
 The only necessary conservation equation to be set up is the solute balance. The following derivation gives the general model; all variables are time-dependent. Special cases of the model will be used for parts 2 through 4. For instance, in part 2 all but the two variables $x, w_1$ are time-dependent, and $w_1$ is defined by a formula involving the Heaviside function $u(t-a)$.
-
 $$\begin{align*}
     \frac{d\left(xw\right)}{dt} &= \left(x_1w_1 + x_2w_2\right) - xw\\
     \frac{d\left(x\cdot\rho V\right)}{dt} &= \left(x_1w_1 + x_2w_2\right) - x\cdot\rho V\\
     \frac{dx}{dt} &= \frac{x_1w_1 + x_2w_2}{\rho V} - x
 \end{align*}$$
-
 ### Steady state value of x
 $$\begin{align*}
 x
@@ -43,5 +41,4 @@ $$\begin{align*}
     \frac{dx(t)}{dt} &= \frac{x_1w_1}{\rho V} + \frac{100x_2}{\rho V}\left[2-u(t-15)\right] - x(t)\\
     \frac{dx(t)}{dt} &= \frac{0.2w_1}{\rho V}\left[0.2 + u(t-15)\right] + \frac{100x_2}{\rho V}\left[2-u(t-15)\right] - x(t)
 \end{align*}$$
-These equations are easily solved using the Laplace transform method.<br/>
-Math inline equation: $x_1, w_1, w_2$
+These equations are easily solved using the Laplace transform method.
