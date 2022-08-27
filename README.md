@@ -21,7 +21,7 @@ The goal is to model the stirred-tank blending process.
 - Constant density during mixing
 - No reactions occur
 ### Conservation Equations
-The only necessary conservation equation to be set up is the solute balance. The following derivation gives the general model; all variables are time-dependent. Special cases of the model will be used for parts 2 through 4. For instance, in part 2 all but the two variables $x, w_1$ are time-dependent, and $w_1$ is defined by a formula involving the Heaviside function $u(t-a)$.
+$u(t-a)$.
 
 $$
 \begin{align}
