@@ -13,7 +13,7 @@ The "Systematic Approach for Developing Dynamic Models" will be followed, but so
 The goal is to model the stirred-tank blending process.
 ### Model end-use
 - To determine the steady-state value of $x$. This steady-state value is denoted as $x(\infty)$
-- To determine the response $x(t)$ for sudden changes in the inputs $w_1, w_2, x_1$.
+- To determine the response $x(t)$ for sudden changes in the inputes $w_1, w_2, x_1$.
 ### Schematic Diagram
 (I dunno how to add images yet)
 ### Assumptions
