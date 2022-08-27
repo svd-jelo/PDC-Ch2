@@ -74,4 +74,10 @@ The following are the respective special cases of the general model correspondin
 \end{align*}
 ```
 
-These equations are easily solved using the Laplace transform method.
+These equations are easily solved using the Laplace transform method. Using Python the solutions are
+
+```
+(-0.5*(1 - exp(0.388888888888889*t))*Heaviside(t) - 19.514005770644*(0.00292829969481819*exp(0.388888888888889*t) - 1.0)*Heaviside(t - 15))*exp(-0.388888888888889*t)
+(-0.5*(1 - exp(0.388888888888889*t))*Heaviside(t) - 36.5887608199574*(0.00292829969481819*exp(0.388888888888889*t) - 1.0)*Heaviside(t - 15))*exp(-0.388888888888889*t)
+(-0.5*(1 - exp(0.388888888888889*t))*Heaviside(t) + 12.1962536066525*(0.00292829969481819*exp(0.388888888888889*t) - 1.0)*Heaviside(t - 15))*exp(-0.388888888888889*t)
+```
