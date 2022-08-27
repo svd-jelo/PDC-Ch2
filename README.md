@@ -54,6 +54,7 @@ x
 $$
 ### Response x(t) for sudden changes in w1, w2, x1
 The following are the respective special cases of the general model corresponding to parts 2 through 4
+
 $$
 \begin{align*}
     \frac{dx(t)}{dt} &= \frac{x_2w_2}{\rho V} + \frac{100x_1}{\rho V}\left[5-u(t-15)\right] - x(t)\\
@@ -61,4 +62,5 @@ $$
     \frac{dx(t)}{dt} &= \frac{0.2w_1}{\rho V}\left[0.2 + u(t-15)\right] + \frac{100x_2}{\rho V}\left[2-u(t-15)\right] - x(t)
 \end{align*}
 $$
+
 These equations are easily solved using the Laplace transform method.
