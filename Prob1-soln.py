@@ -56,10 +56,6 @@ x1_ = invL(X1)
 x2_ = invL(X2)
 x3_ = invL(X3)
 
-print(x1_)
-print(x2_)
-print(x3_)
-
 #Time interval
 a = np.linspace(0,25,250)
 
@@ -109,7 +105,4 @@ ax[2,1].set_xlabel('time (min)')
 ax[2,1].legend()
 
 plt.show()
-
-
-
 
