@@ -29,7 +29,7 @@ The goal is to model the stirred-tank blending process.
 
 ### Schematic Diagram
 
-![Prob1-Schematic](../PDC-Ch2/images/IMG_20220827_120101.jpg)
+![Prob1-Schematic](../4th-Year-Thesis/PDC-Ch2/images/IMG_20220827_120101)
 
 ### Assumptions
 
