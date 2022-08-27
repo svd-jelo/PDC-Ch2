@@ -21,7 +21,7 @@ The goal is to model the stirred-tank blending process.
 - Constant density during mixing
 - No reactions occur
 ### Conservation Equations
-Why is this not working? $x=1.0 + y$ <br/>
+Why is this not working? $x = 1.0 + y$ <br/>
 The only necessary conservation equation to be set up is the solute balance.
 $$
 \begin{align*}
