@@ -1,0 +1,71 @@
+from sympy import *
+import sympy as sp
+import numpy as np
+import matplotlib.pyplot as plt
+sp.init_printing()
+
+t = sp.symbols('t', real=True, positive=True)
+s = sp.symbols('s')
+a = sp.symbols('a', real=True, positive=True)
+
+def invL(F):
+    return sp.inverse_laplace_transform(F,s,t)
+
+#Parameters
+g1 = 10 #m/w (min)
+g2 = 1 #meCe/heAe (min)
+g3 = 1 #meCe/wC (min)
+g4 = 1/20 #1/wC (degC-min/kcal)
+Tiss = 100.0 #nominal value of the feed temperature Ti (deg C)
+Qss = 5000.0 #nominal value of electric power Q (kcal/min)
+
+#input (driving force)
+r_ = 350.0 + 20*sp.Heaviside(t-40)
+
+#time interval
+a = np.linspace(0,80,800)
+
+#initial conditions
+dT0 = 0
+T0 = 350
+
+#Subsidiary Equations
+Q1 = 1/(g1*g2*(s**2) + (g1 + g2 + g3)*s + 1)
+Q2 = 1/((g1 + g3)*s + 1)
+
+R = sp.laplace_transform(r_,t,s,noconds=true)
+
+S1 = dT0 + (g1*g2*s + (g1 + g2 + g3))*T0
+S2 = (g1 + g3)*T0
+
+Y1 = S1*Q1 + R*Q1
+Y2 = S2*Q2 + R*Q2
+
+#Solutions
+T1_ = invL(Y1)
+T2_ = invL(Y2)
+
+#input Q
+Q = np.ones(len(a))*5000
+Q[400:] = 5400
+
+#Lambdified solutions
+T1 = lambdify(t, T1_, "numpy")
+T2 = lambdify(t, T2_, "numpy")
+
+#Plot
+fig, ax = plt.subplots(nrows=1,ncols=2,figsize=(14,14))
+
+ax[0].plot(a,Q,'g-', linewidth=2, label="Power input Q(t)")
+ax[0].set_xlabel('time (min)')
+ax[0].set_ylabel('power (kcal/min)')
+ax[0].legend()
+
+ax[1].plot(a,T1(a),'b-',linewidth=2, label='second-order T(t)')
+ax[1].plot(a,T2(a),'r--',linewidth=2, label='first-order T(t)')
+ax[1].set_xlabel('time (min)')
+ax[1].set_ylabel('temperature (deg C)')
+ax[1].legend()
+
+plt.show()
+
